@@ -40,7 +40,7 @@ jobs:
           git submodule update --init --recursive
       - name: build
         run: |
-          pushd build
+          mkdir build && pushd build
           cmake ..
           make -j8
           popd
